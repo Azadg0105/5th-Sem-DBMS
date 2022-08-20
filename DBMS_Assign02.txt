@@ -1,0 +1,36 @@
+MariaDB> create database St_Func;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB> use St_Func;
+Database changed
+MariaDB [St_Func]> create table Stud_Marks(Name varchar(20), Total_marks int);
+Query OK, 0 rows affected (0.015 sec)
+
+MariaDB [St_Func]> insert into Stud_Marks(Name, Total_marks)
+    -> values ('Mohit', 990), ('Sahil', 1290), ('Sonu', 1189), ('Hardik', 850);
+Query OK, 4 rows affected (0.008 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+MariaDB [St_Func]> insert into Stud_Marks(Name, Total_marks)
+    -> values ('Vaibhav', 889), ('Shantanu', 1380), ('Akshay', 978), ('Jay', 1498);
+Query OK, 4 rows affected (0.009 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+MariaDB [St_Func]> select * from Stud_Marks;
++----------+-------------+
+| Name     | Total_marks |
++----------+-------------+
+| Mohit    |         990 |
+| Sahil    |        1290 |
+| Sonu     |        1189 |
+| Hardik   |         850 |
+| Vaibhav  |         889 |
+| Shantanu |        1380 |
+| Akshay   |         978 |
+| Jay      |        1498 |
++----------+-------------+
+8 rows in set (0.001 sec)
+
+MariaDB [St_Func]> create table Result(Roll int, Name varchar(20), Class varchar(30));
+Query OK, 0 rows affected (0.015 sec)
+
